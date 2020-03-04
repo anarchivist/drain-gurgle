@@ -4,11 +4,13 @@
   "description": "An attempt to migrate the [RPTF database](https://github.com/RadioPreservationTaskForce/rptf-database) to a static site driven by a JS search engine.",
   "main": "index.js",
   "scripts": {
+    "include-npm-deps": "mkdir -p assets/vendor && cp node_modules/popper.js/dist/umd/popper.min.js assets/vendor && cp node_modules/bootstrap/dist/js/bootstrap.min.js assets/vendor",
     "jekyll:build": "npm run include-npm-deps && bundle exec jekyll build",
     "jekyll:clean": "bundle exec jekyll clean",
     "jekyll:doctor": "bundle exec jekyll doctor",
+    "jekyll:pagemaster": "bundle exec jekyll pagemaster collections",
     "jekyll:serve": "npm run include-npm-deps && bundle exec jekyll serve",
-    "include-npm-deps": "mkdir -p assets/vendor && cp node_modules/popper.js/dist/umd/popper.min.js assets/vendor && cp node_modules/bootstrap/dist/js/bootstrap.min.js assets/vendor"
+    "netlify:build": "npm run jekyll:pagemaster && npm run jekyll:build"
   },
   "repository": {
     "type": "git",
