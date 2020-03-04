@@ -41,7 +41,12 @@ code {
 }
 
 
-nav.bg-dark.topbar {background: #ac2531 !important}
+nav.bg-dark.topbar {
+  background: $primary !important;
+  ul li.nav-item a { color: #eee; }
+  ul li.nav-item a:hover { color: #ccc; }
+}
+
 footer.page-footer {
   position: absolute;
   bottom: 0;
@@ -60,12 +65,17 @@ footer.page-footer {
   background-size: cover;
   position: relative;
   color: #ddd;
+
+  p, h2, h3 {
+    color: #ddd;
+  }
+  a {
+    color: #fff;
+  }
 }
 
-.hero-image p, .hero-image h2, .hero-image h3 { color: #ddd; }
-.hero-image a {color: #fff; }
 .hero-image.full-width {
-  width: 99vw;
+  width: 100vw;
   height: 60vmin;
   position: relative;
   left: 50%;
