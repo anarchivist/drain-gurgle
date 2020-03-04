@@ -1,0 +1,15 @@
+<header class="site-header">
+
+<div class="wrapper">
+  <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+
+  <nav class="site-nav">
+  <form role="search" action="/search">
+      <input type="search" id="collections-search" name="query"
+             placeholder="Keyword Search"
+             aria-label="Search collections using keyword">
+      <input class="custom_button" value="Search" type="submit"></input>
+  </form>
+  </nav>
+</div>
+</header>

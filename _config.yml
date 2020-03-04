@@ -1,0 +1,92 @@
+title: Sound Collections Database
+email: database@radiopreservation.org
+description: >- # this means to ignore newlines until "baseurl:"
+  This database is a project of the Library of Congress NRPB, RPTF, and ARSC.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: RadioTaskForce
+github_username:  RadioPreservationTaskForce
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-lunr-js-custom-search
+  - pagemaster
+
+collections:
+  collections:
+    output: true
+    source: sample-data.json
+    id_key: id
+    layout: collection-page
+    permalink: /collections/:path
+
+lunr_settings:
+  collections:
+  - collections
+  atozsortfield: collectionTitle_txt
+  fields:
+    - boost: 10
+      jekyllfields: [collectionTitle_txt]
+      searchfield: title
+    - boost: 10
+      jekyllfields: [collectionDescription_txt]
+      searchfield: description
+    - boost: 10
+      jekyllfields: [collectionContentTypes_txt]
+      searchfield: contenttypes
+      facetfield: true
+    - boost: 10
+      jekyllfields: [collectionGenres_txt]
+      searchfield: genres
+      facetfield: true
+    - boost: 10
+      jekyllfields: [collectionOwnerName_txt]
+      searchfield: repositories
+      facetfield: true
+    - boost: 10
+      jekyllfields: [collectionOwnerState_txt]
+      searchfield: state
+      facetfield: true
+  displayfields:
+    - field: collectionTitle_txt
+      headerfield: true
+      highlight: false
+    - field: collectionDescription_Txt
+      label: Description
+      highlight: true
+    - field: collectionContentTypes_txt
+      label: Content type
+      joiner: '; '
+    - field: collectionFormats_txt
+      label: Format
+      joiner: '; '
+    - field: collectionExtent_txt
+      label: Extent
+    - field: collectionOwnerName_txt
+      label: Repository/Collector
+    - field: collectionFindingAidUrl_txt
+      label: Online finding aid
+  fuzzysearchfields: [title, description]
+  view_facets: 5
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
