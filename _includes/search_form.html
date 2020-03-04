@@ -1,8 +1,13 @@
-<form role="search">
-    <div class="search-control" style="display:none;">
-        <input type="search" id="collections-search" name="query"
-               placeholder="Keyword Search"
-               aria-label="Search collections using keyword">
-        <button class="custom_button" style="float: right;">Search</button>
+<div class="navbar-search navbar navbar-light bg-light" role="navigation">
+  <div class="container">
+  <form class="search-query-form" role="search" aria-label="Search" action="{{ "/search" | relative_url }}" method="get">
+    <div class="input-group">
+    <label for="query" class="sr-only">search for</label>
+    <input type="text" id="collections-search" name="query" id="search_field"
+           placeholder="Search..." class="search-q q form-control rounded-left"
+           aria-label="Search collections using keyword">
+    <span class="input-group-append">
+      <button class="btn btn-primary search-btn" value="Search" type="submit"><span class="submit-search-text">Search</span></button>
     </div>
 </form>
+</div>

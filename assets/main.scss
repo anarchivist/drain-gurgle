@@ -1,0 +1,92 @@
+---
+---
+
+@import "variables";
+@import "header";
+@import "bootstrap/scss/bootstrap";
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 80px;
+}
+
+.page-content ul > li::before {
+	content: "";
+}
+
+#result::after {
+ background-image: radial-gradient(rgb(0, 69, 152), white)
+}
+
+.main-content {
+ max-width: none;
+}
+
+code {
+  word-wrap: break-word;
+}
+
+.thumbnail {
+  height: 175px;
+}
+.thumbnail img {
+ height: 175px;
+}
+
+.searchResultMetadata {
+  display: inline;
+}
+
+
+nav.bg-dark.topbar {background: #ac2531 !important}
+footer.page-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-height: 80px;
+  padding-top: 15px;
+  border-top: 1px rgb(231, 231, 231) solid;
+  background-color: #f8f8f8;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/werd.jpg");
+  min-height: 35em;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  color: #ddd;
+}
+
+.hero-image p, .hero-image h2, .hero-image h3 { color: #ddd; }
+.hero-image a {color: #fff; }
+.hero-image.full-width {
+  width: 99vw;
+  height: 60vmin;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  border-radius: 0;
+}
+
+.vertical-align {
+  position: absolute;
+  text-align: right;
+  bottom: 0;
+  right: 60px;
+}
+
+@media only screen and (max-width: 767px) {
+  .jumbotron p {
+    font-size: 14px;
+  }
+  footer.page-footer {
+    font-size: 10px;
+  }
+}

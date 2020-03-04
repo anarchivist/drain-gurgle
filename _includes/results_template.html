@@ -1,25 +1,29 @@
-<div id="header_info"></div>
-<div style="width: 100%;">
-<div style="float: left; width: 20%; ">
-  <div id="facets">
-  </div>
-</div>
-<div style="float: left; width: 75%; display: none; border: 1px solid #ccc" class="all_results">
-  <div id="search_results">
-    <div id="searchInfo">
-      <span id="number_results"></span>
-      <span id="sort_by" class="dropdownsort"><label for="sortSelect">Sort By:</label>
+<div class="row col-md-12">
+  <section id="search_results" class="col-lg-9 order-last" aria-label="search results">
+    <div id="searchInfo" class="sort-pagination d-md-flex justify-content-between" role="navigation" aria-label="Results navigation">
+      <span id="number_results" class="page-entries"></span>
+      <div id="sort_by" class="sort-dropdown btn-group">
+        <label for="sortSelect">Sort By:</label>
         <select id="sortSelect" name="sort" onchange="changeSort(event);">
           <option value="">Relevance</option>
           <option value="atoz">Title (A-Z)</option>
           <option value="atoz___desc">Title (Z-A)</option>
         </select>
-      </span>
+      </div>
     </div>
-  </div>
-  <ul id="resultslist">
-  </ul>
-  <div id="pagination"></div>
-</div>
-<div style="clear:both"><span></span></div>
+    <h2 class="sr-only">Search Results</h2>
+    <div id="documents" class="documents-list">
+      <ul id="resultslist">
+      </ul>
+    </div>
+    <div class="row record-padding">
+      <div class="col-md-12">
+        <div id="pagination" class="pagination" role="region" aria-label="pagination links"></div>
+      </div>
+    </div>
+  </section>
+  <section id="sidebar" class="page-sidebar col-lg-3 order-first" aria-label="limit your search">
+    <div id="facets" class="facets sidenav facets-toggleable-md">
+    </div>
+  </section>
 </div>

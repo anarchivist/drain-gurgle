@@ -1,0 +1,28 @@
+{
+  "name": "sound-collector",
+  "version": "1.0.0",
+  "description": "An attempt to migrate the [RPTF database](https://github.com/RadioPreservationTaskForce/rptf-database) to a static site driven by a JS search engine.",
+  "main": "index.js",
+  "scripts": {
+    "jekyll:build": "npm run include-npm-deps && bundle exec jekyll build",
+    "jekyll:clean": "bundle exec jekyll clean",
+    "jekyll:doctor": "bundle exec jekyll doctor",
+    "jekyll:serve": "npm run include-npm-deps && bundle exec jekyll serve",
+    "include-npm-deps": "mkdir -p assets/vendor && cp node_modules/popper.js/dist/umd/popper.min.js assets/vendor && cp node_modules/bootstrap/dist/js/bootstrap.min.js assets/vendor"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anarchivist/sound-collector.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/anarchivist/sound-collector/issues"
+  },
+  "homepage": "https://github.com/anarchivist/sound-collector#readme",
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "popper.js": "^1.16.1"
+  }
+}

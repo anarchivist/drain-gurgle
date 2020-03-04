@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}" class="js">
+
+  {%- include head.html -%}
+
+  <body>
+
+    {%- include header.html -%}
+
+    <main id="main-container" class="container" role="main" aria-label="Main content">
+      <div class="row">
+        <section class="col-md-12">
+        {{ content }}
+        </section>
+      </div>
+    </main>
+
+    {%- include footer.html -%}
+    {%- include custom-footer.html -%}
+  </body>
+
+</html>

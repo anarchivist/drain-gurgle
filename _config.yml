@@ -1,4 +1,4 @@
-title: Sound Collections Database
+title: RPTF/ARSC Sound Collections Database
 email: database@radiopreservation.org
 description: >- # this means to ignore newlines until "baseurl:"
   This database is a project of the Library of Congress NRPB, RPTF, and ARSC.
@@ -13,6 +13,17 @@ plugins:
   - jekyll-feed
   - jekyll-lunr-js-custom-search
   - pagemaster
+
+sass:
+  load_paths:
+    - _sass
+    - node_modules
+
+permalink: pretty
+
+header_pages:
+  - about.md
+  - contribute.md
 
 collections:
   collections:
@@ -79,14 +90,14 @@ lunr_settings:
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
