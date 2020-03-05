@@ -4,7 +4,7 @@
   "description": "An attempt to migrate the [RPTF database](https://github.com/RadioPreservationTaskForce/rptf-database) to a static site driven by a JS search engine.",
   "main": "index.js",
   "scripts": {
-    "include-npm-deps": "mkdir -p assets/vendor && cp node_modules/popper.js/dist/umd/popper.min.js assets/vendor &&  cp node_modules/jquery/dist/jquery.min.js assets/vendor && cp node_modules/bootstrap/dist/js/bootstrap.min.js assets/vendor && cp node_modules/lunr/lunr.min.js assets/vendor && cp node_modules/paginationjs/dist/pagination.min.js assets/vendor && cp node_modules/lodash/lodash.min.js assets/vendor && cp node_modules/bootstrap-icons/icons asset/vendor",
+    "include-npm-deps": "mkdir -p assets/vendor && cp node_modules/popper.js/dist/umd/popper.min.js assets/vendor &&  cp node_modules/jquery/dist/jquery.min.js assets/vendor && cp node_modules/bootstrap/dist/js/bootstrap.min.js assets/vendor && cp node_modules/lunr/lunr.min.js assets/vendor && cp node_modules/paginationjs/dist/pagination.min.js assets/vendor && cp node_modules/lodash/lodash.min.js assets/vendor && cp -R node_modules/bootstrap-icons/icons assets/vendor",
     "jekyll": "bundle exec jekyll",
     "jekyll:build": "npm run include-npm-deps && npm run jekyll build",
     "netlify:build": "npm run jekyll pagemaster collections && npm run jekyll:build"
