@@ -3,11 +3,17 @@ title: Search
 layout: page
 permalink: /search
 ---
-<script src="{{site.baseurl}}/js/custom-search.js"></script>
+<script src="/assets/vendor/lunr.min.js"></script>
+<script src="/assets/vendor/pagination.min.js"></script>
+<script src="/assets/vendor/lodash.min.js"></script>
+<script src="/assets/lunr.custom.search.js"></script>
+<script src="/assets/index.js"></script>
 <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/custom-search.css">
 <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/local-search.css">
 
-<div id="spinner"><i class="fa fa-spinner fa-spin"></i></div>
+<div class="d-flex justify-content-center">
+  <div id="spinner" class="spinner-border" role="status"><span class="sr-only">Loading...</span></div>
+</div>
 {% include results_template.html %}
 
 <script>

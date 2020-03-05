@@ -34,6 +34,7 @@ collections:
     permalink: /collections/:path
 
 lunr_settings:
+  js_dir: "assets"
   collections:
   - collections
   atozsortfield: collectionTitle_txt

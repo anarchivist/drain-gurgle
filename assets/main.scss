@@ -91,3 +91,13 @@ footer.page-footer {
     font-size: 10px;
   }
 }
+
+.collapse-arrow img {
+  transform: rotate(90deg);
+  transition: .3s transform ease-in-out;
+  display: inline-block;
+}
+
+.collapse-arrow .collapsed img {
+  transform: rotate(0deg);
+}

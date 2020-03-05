@@ -9,12 +9,12 @@
     {%- assign page_paths = site.header_pages | default: default_paths -%}
     {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
     <a class="mb-0 navbar-brand navbar-logo"  href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
-    <!-- <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#user-util-collapse" aria-controls="user-util-collapse" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
-    </button> -->
+    </button>
 
     {%- if titles_size > 0 -%}
-    <div class="justify-content-md-end">
+    <div class="collapse navbar-collapse justify-content-md-end" id="navbar-collapse">
       <ul class="navbar-nav ml-auto">
         {%- for path in page_paths -%}
           {%- assign my_page = site.pages | where: "path", path | first -%}
