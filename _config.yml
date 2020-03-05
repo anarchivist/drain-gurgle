@@ -10,7 +10,6 @@ github_username:  RadioPreservationTaskForce
 # Build settings
 theme: minima
 plugins:
-  - jekyll-feed
   - jekyll-lunr-js-custom-search
   - pagemaster
 
@@ -28,7 +27,7 @@ header_pages:
 collections:
   collections:
     output: true
-    source: sample-data.json
+    source: rptf-collections.json
     id_key: id
     layout: collection-page
     permalink: /collections/:path
