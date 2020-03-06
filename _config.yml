@@ -8,9 +8,9 @@ twitter_username: RadioTaskForce
 github_username:  RadioPreservationTaskForce
 
 # Build settings
-theme: minima
 plugins:
   - jekyll-lunr-js-custom-search
+  - jekyll-seo-tag
   - pagemaster
 
 sass:

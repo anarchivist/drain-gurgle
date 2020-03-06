@@ -114,7 +114,7 @@ function simpleTemplating(data, values, settings) {
     var image_data = image_field.length > 0 ? values[key][image_field[0]['field']] : '';
     var image_link = image_data && image_data[0] == '<' ? image_data : `<img src="${image_data}">`
     html += `<li id="result">${image_data ? `<div class="thumbnail">${image_link}</div>` : ``}
-    <h2><a href="${baseurl}${values[key].url}">${values[key][header_field]}</a></h2><div class="results_data">`
+    <h3><a href="${baseurl}${values[key].url}">${values[key][header_field]}</a></h3><div class="results_data">`
     if (dispfields && dispfields.length > 0) {
       html += `<table class="searchResultMetadata"><tbody>`
       for (var j = 0; j<dispfields.length; j++){
@@ -332,6 +332,9 @@ function loadsearchtemplate(settings){
         pageSize: 10,
         showGoInput: true,
         showGoButton: true,
+        classPrefix: "page-item pagination",
+        prevText: "&laquo; Previous",
+        nextText: "Next &raquo;",
         callback: function(data, pagination) {
             localStorage.setItem("currentpage", parseInt(pagination.pageNumber))
             var from = pagination.pageSize * pagination.pageNumber - pagination.pageSize + 1
