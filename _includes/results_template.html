@@ -1,17 +1,26 @@
-<div class="row col-md-12">
-  <div id="search_results" class="col-lg-9 order-last" aria-label="search results">
-    <div id="header_info"></div>
-    <div id="searchInfo" class="sort-pagination d-md-flex justify-content-between" role="navigation" aria-label="Results navigation">
-      <span id="number_results" class="page-entries"></span>
-      <div id="sort_by" class="sort-dropdown btn-group">
-        <label for="sortSelect">Sort By:</label>
-        <select id="sortSelect" name="sort" onchange="changeSort(event);">
-          <option value="">Relevance</option>
-          <option value="atoz">Title (A-Z)</option>
-          <option value="atoz___desc">Title (Z-A)</option>
-        </select>
-      </div>
+<div class="row">
+  <div id="header_info" class="col-md-12"></div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+  <div id="searchInfo" class="sort-pagination d-md-flex justify-content-between" role="navigation" aria-label="Results navigation">
+    <span id="number_results" class="page-entries"></span>
+    <div class="d-flex justify-content-center">
+      <div id="spinner2" class="spinner-border" role="status"><span class="sr-only">Loading...</span></div>
     </div>
+    <div id="sort_by" class="sort-dropdown btn-group">
+      <label for="sortSelect">Sort By:</label>
+      <select id="sortSelect" name="sort" onchange="changeSort(event);">
+        <option value="">Relevance</option>
+        <option value="atoz">Title (A-Z)</option>
+        <option value="atoz___desc">Title (Z-A)</option>
+      </select>
+    </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div id="search_results" class="col-lg-9 order-last" aria-label="search results">
     <h2 class="sr-only">Search Results</h2>
     <div id="documents" class="documents-list">
       <ul id="resultslist">
@@ -24,7 +33,7 @@
     </div>
   </div>
   <section id="sidebar" class="page-sidebar col-lg-3 order-first" aria-label="limit your search">
-    <div id="facets" class="facets accordion">
+    <div id="facets" class="facets">
     </div>
   </section>
 </div>

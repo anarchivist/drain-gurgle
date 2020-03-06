@@ -92,12 +92,48 @@ footer.page-footer {
   }
 }
 
+.collapse-arrow {
+  border-bottom: 0;
+}
+
 .collapse-arrow img {
   transform: rotate(90deg);
   transition: .3s transform ease-in-out;
   display: inline-block;
 }
 
+.collapse-arrow button {
+  font-weight: 500;
+}
+
 .collapse-arrow .collapsed img {
   transform: rotate(0deg);
+}
+
+#header_info {
+  padding: 15px !important;
+}
+
+.facet-limit {
+  margin-bottom: 1rem;
+}
+
+.facet-values {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.facet-values li {
+  padding-right: 1em;
+  text-indent: -15px;
+  padding-left: 15px;
+  padding-bottom: 0.5rem;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.facet-values li a {
+  color: $primary;
 }

@@ -278,7 +278,7 @@ function loadsearchtemplate(settings){
           });
           var current_url = site_url + window.location.search + "&facet_" + facet_value.replace("_", "") + "="
           var facet_header = facet_value.replace("_", " ");
-          facet_html += `<div class="card"><div class="card-header" id="${facet_value}_heading"><h4 class="mb-0 collapse-arrow"><button class="btn btn-outline-primary btn-block collapsed" type="button" data-toggle="collapse" data-target="#collapse_${facet_value}" aria-expanded="false" aria-controls="#collapse_${facet_value}">${facet_header.charAt(0).toUpperCase()}${facet_header.slice(1)}<img src="/assets/vendor/bootstrap-icons/chevron-right.svg" class="collapse-icon"></button></h4></div><div id="collapse_${facet_value}" class="collapse" aria-labelledby="${facet_value}_heading" data-parent="#facets"><div class="card-body"><ul class="facet-values list-unstyled" id="${facet_value}_facet_list">`
+          facet_html += `<div class="card facet-limit"><h4 class="card-header mb-0 p-0 collapse-arrow" id="${facet_value}_heading"><button class="btn btn-block p-2 text-left collapsed" type="button" data-toggle="collapse" data-target="#collapse_${facet_value}" aria-expanded="false" aria-controls="#collapse_${facet_value}">${facet_header.charAt(0).toUpperCase()}${facet_header.slice(1)}<img src="/assets/vendor/bootstrap-icons/chevron-right.svg" class="collapse-icon"></button></h4><div id="collapse_${facet_value}" class="panel-collapse facet-content collapse" aria-labelledby="${facet_value}_heading" data-parent="#facets"><div class="card-body"><ul class="facet-values list-unstyled" id="${facet_value}_facet_list">`
           var greater_length = false;
           for (var i = 0; i<sorted_list.length; i++){
             var link_html =  `<li><a onclick="location.href='${current_url}${sorted_list[i][0]}';" id="${sorted_list[i][0].toLowerCase().replace(/[^A-Za-z0-9]/g, "")}">
@@ -296,7 +296,7 @@ function loadsearchtemplate(settings){
               <b>Show All</b>
             </a></li>`
           }
-          facet_html += `</ul></div></div>`
+          facet_html += `</ul></div></div></div>`
         }
         var facets_ident = settings && settings['facets'] ? settings['facets'] : "#facets";
         var pagination_ident = settings && settings['pagination'] ? settings['pagination'] : "#pagination";

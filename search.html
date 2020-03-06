@@ -10,14 +10,11 @@ permalink: /search
 <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/custom-search.css">
 <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/local-search.css">
 
-<div class="d-flex justify-content-center">
-  <div id="spinner" class="spinner-border" role="status"><span class="sr-only">Loading...</span></div>
-</div>
 {% include results_template.html %}
 
 <script>
 window.addEventListener("load", function(){
     loadsearchtemplate();
-    $('#spinner').hide();
+    $('#spinner2').hide();
 });
 </script>
