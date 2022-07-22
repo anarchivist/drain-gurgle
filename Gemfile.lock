@@ -80,9 +80,8 @@ GEM
     therubyracer (0.12.3)
       libv8 (~> 3.16.14.15)
       ref
-    thread_safe (0.3.6)
-    tzinfo (1.2.6)
-      thread_safe (~> 0.1)
+    tzinfo (2.0.5)
+      concurrent-ruby (~> 1.0)
     tzinfo-data (1.2019.3)
       tzinfo (>= 1.0.0)
     unicode-display_width (1.6.1)
@@ -96,7 +95,7 @@ DEPENDENCIES
   jekyll-lunr-js-custom-search!
   jekyll-seo-tag
   pagemaster
-  tzinfo (~> 1.2)
+  tzinfo (~> 2.0)
   tzinfo-data
   wdm (~> 0.1.1)
 
